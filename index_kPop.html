@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>K-POP 소개 - 한국 대중음악의 세계</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -51,35 +51,73 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-    body {
-      background: linear-gradient(120deg, #e0f7fa 0%, #b3e5fc 100%);
-      min-height: 100vh;
-      margin: 0;
-      font-family: 'Segoe UI', 'Malgun Gothic', Arial, sans-serif;
-      color: #1565c0;
-    }
-    h1, h2 {
-      color: #1976d2;
-    }
-    section {
-      background: rgba(227,242,253,0.7);
-      border-radius: 18px;
-      box-shadow: 0 4px 24px rgba(33,150,243,0.08);
-      border: 1px solid #90caf9;
-      padding: 32px 24px;
-      margin-bottom: 24px;
-    }
-    ul {
-      color: #1976d2;
-    }
-    .highlight {
-      background: #e3f2fd;
-      color: #1976d2;
-      padding: 2px 8px;
-      border-radius: 6px;
-      font-weight: 500;
-      display: inline-block;
-    }
+        body {
+            background: linear-gradient(120deg, #e0f7fa 0%, #b3e5fc 100%);
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', 'Malgun Gothic', Arial, sans-serif;
+            color: #1565c0;
+        }
+        h1, h2 {
+            color: #1976d2;
+        }
+        section {
+            background: rgba(227,242,253,0.7);
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(33,150,243,0.08);
+            border: 1px solid #90caf9;
+            padding: 24px 12px;
+            margin-bottom: 18px;
+        }
+        ul {
+            color: #1976d2;
+        }
+        .highlight {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 500;
+            display: inline-block;
+        }
+        @media (max-width: 600px) {
+            nav .max-w-6xl {
+                flex-direction: column;
+                gap: 8px;
+                padding: 0.5rem 0.5rem;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                gap: 4px;
+                justify-content: center;
+            }
+            nav li a {
+                font-size: 1rem;
+                padding: 0.5rem 0.75rem;
+            }
+            h1 {
+                font-size: 2.2rem !important;
+            }
+            h2 {
+                font-size: 1.2rem !important;
+            }
+            section {
+                padding: 12px 4px;
+                margin-bottom: 12px;
+            }
+            .grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+            .flex.items-center {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .max-w-6xl {
+                padding-left: 0.5rem !important;
+                padding-right: 0.5rem !important;
+            }
+        }
   </style>
 </head>
 <body class="font-korean bg-gradient-to-br from-kpop-600 via-kpop-500 to-kpop-700 min-h-screen">
@@ -103,7 +141,7 @@
     
     <div class="relative z-10 max-w-6xl mx-auto px-4 py-8">
         <!-- 헤더 -->
-        <div class="text-center text-white mb-16 animate-slide-up">
+    <div class="text-center text-white mb-8 animate-slide-up">
             <h1 class="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-kpop-100 to-kpop-200 bg-clip-text text-transparent animate-glow flex items-center justify-center gap-2">
                 <span style="font-size:1em;display:inline-flex;align-items:center;vertical-align:middle;">🎵</span>
                 K-POP 소개
