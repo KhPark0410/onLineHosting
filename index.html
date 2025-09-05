@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>K-POP 소개 - 한국 대중음악의 세계</title>
+    <title>신우회 2024 - 가족모임 안내</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -13,23 +13,34 @@
                         'korean': ['Noto Sans KR', 'sans-serif'],
                     },
                     colors: {
-                        'kpop': {
-                            50: '#f0f9ff',
-                            100: '#e0f7fa',
-                            200: '#b3e5fc',
-                            300: '#81d4fa',
-                            400: '#4fc3f7',
-                            500: '#29b6f6',
-                            600: '#039be5',
-                            700: '#0288d1',
-                            800: '#0277bd',
-                            900: '#01579b',
+                        'family': {
+                            50: '#fef7f0',
+                            100: '#fdeee0',
+                            200: '#fad9c1',
+                            300: '#f7c19e',
+                            400: '#f4a878',
+                            500: '#f18f52',
+                            600: '#e67e22',
+                            700: '#d35400',
+                            800: '#b03a00',
+                            900: '#8e2e00',
                         }
                     },
                     animation: {
                         'float': 'float 6s ease-in-out infinite',
                         'glow': 'glow 2s ease-in-out infinite alternate',
                         'slide-up': 'slideUp 0.5s ease-out',
+                        'bounce-slow': 'bounce 3s infinite',
+                        'pulse-slow': 'pulse 3s infinite',
+                        'wiggle': 'wiggle 1s ease-in-out infinite',
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'scale-in': 'scaleIn 0.6s ease-out',
+                        'slide-in-left': 'slideInLeft 0.8s ease-out',
+                        'slide-in-right': 'slideInRight 0.8s ease-out',
+                        'rotate-slow': 'rotate 20s linear infinite',
+                        'gradient-x': 'gradient-x 15s ease infinite',
+                        'gradient-y': 'gradient-y 15s ease infinite',
+                        'gradient-xy': 'gradient-xy 15s ease infinite',
                     },
                     keyframes: {
                         float: {
@@ -37,263 +48,423 @@
                             '50%': { transform: 'translateY(-20px)' },
                         },
                         glow: {
-                            '0%': { boxShadow: '0 0 20px rgba(41, 182, 246, 0.5)' },
-                            '100%': { boxShadow: '0 0 30px rgba(41, 182, 246, 0.8)' },
+                            '0%': { boxShadow: '0 0 20px rgba(230, 126, 34, 0.5)' },
+                            '100%': { boxShadow: '0 0 30px rgba(230, 126, 34, 0.8)' },
                         },
                         slideUp: {
                             '0%': { transform: 'translateY(20px)', opacity: '0' },
                             '100%': { transform: 'translateY(0)', opacity: '1' },
-                        }
+                        },
+                        wiggle: {
+                            '0%, 100%': { transform: 'rotate(-3deg)' },
+                            '50%': { transform: 'rotate(3deg)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        scaleIn: {
+                            '0%': { transform: 'scale(0.9)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        },
+                        slideInLeft: {
+                            '0%': { transform: 'translateX(-100px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                        slideInRight: {
+                            '0%': { transform: 'translateX(100px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                        'gradient-x': {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            },
+                        },
+                        'gradient-y': {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'center top'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'center bottom'
+                            },
+                        },
+                        'gradient-xy': {
+                            '0%, 100%': {
+                                'background-size': '400% 400%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '400% 400%',
+                                'background-position': 'right center'
+                            },
+                        },
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+                    },
+                    backdropBlur: {
+                        xs: '2px',
                     }
                 }
             }
         }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background: linear-gradient(120deg, #e0f7fa 0%, #b3e5fc 100%);
-            min-height: 100vh;
-            margin: 0;
-            font-family: 'Segoe UI', 'Malgun Gothic', Arial, sans-serif;
-            color: #1565c0;
-        }
-        h1, h2 {
-            color: #1976d2;
-        }
-        section {
-            background: rgba(227,242,253,0.7);
-            border-radius: 18px;
-            box-shadow: 0 4px 24px rgba(33,150,243,0.08);
-            border: 1px solid #90caf9;
-            padding: 24px 12px;
-            margin-bottom: 18px;
-        }
-        ul {
-            color: #1976d2;
-        }
-        .highlight {
-            background: #e3f2fd;
-            color: #1976d2;
-            padding: 2px 8px;
-            border-radius: 6px;
-            font-weight: 500;
-            display: inline-block;
-        }
-            @media (max-width: 600px) {
-                nav .max-w-6xl {
-                    flex-direction: column;
-                    gap: 6px;
-                    padding: 0.25rem 0.25rem;
-                }
-                nav ul {
-                    flex-wrap: wrap;
-                    gap: 2px;
-                    justify-content: center;
-                }
-                                                nav li a {
-                                                    font-size: 0.4rem;
-                                                    padding: 0.18rem 0.3rem;
-                                                }
-                h1 {
-                    font-size: 2.2rem !important;
-                }
-                h2 {
-                    font-size: 1.2rem !important;
-                }
-                section {
-                    padding: 12px 4px;
-                    margin-bottom: 12px;
-                }
-                .grid {
-                    grid-template-columns: 1fr !important;
-                    gap: 1rem !important;
-                }
-                .flex.items-center {
-                    flex-direction: column;
-                    gap: 0.5rem;
-                }
-                .max-w-6xl {
-                    padding-left: 0.5rem !important;
-                    padding-right: 0.5rem !important;
-                }
-            }
-  </style>
 </head>
-<body class="font-korean bg-gradient-to-br from-kpop-600 via-kpop-500 to-kpop-700 min-h-screen">
-        <!-- 네비게이션 바 -->
-        <nav class="w-full bg-white/80 backdrop-blur-md shadow-lg border-b border-kpop-200 sticky top-0 z-20">
-                    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-3 rounded-2xl bg-white/60 backdrop-blur-xl shadow-2xl border border-white/30">
-                        <div class="text-2xl font-bold text-kpop-700 tracking-tight drop-shadow-lg">🌏 글로벌 팝 문화</div>
-                        <ul class="flex space-x-6 text-lg font-semibold">
-                              <li><a href="index_kPop.html" class="px-4 py-2 rounded-xl bg-white/30 hover:bg-kpop-100/60 text-kpop-700 hover:text-kpop-500 shadow-md transition">K-POP</a></li>
-                              <li><a href="index_usPop.html" class="px-4 py-2 rounded-xl bg-white/30 hover:bg-kpop-100/60 text-kpop-700 hover:text-kpop-500 shadow-md transition">미국 팝</a></li>
-                              <li><a href="index_ukPop.html" class="px-4 py-2 rounded-xl bg-white/30 hover:bg-kpop-100/60 text-kpop-700 hover:text-kpop-500 shadow-md transition">영국 팝</a></li>
-                              <li><a href="index_jpPop.html" class="px-4 py-2 rounded-xl bg-white/30 hover:bg-kpop-100/60 text-kpop-700 hover:text-kpop-500 shadow-md transition">일본 팝</a></li>
-                              <li><a href="index_latPop.html" class="px-4 py-2 rounded-xl bg-white/30 hover:bg-kpop-100/60 text-kpop-700 hover:text-kpop-500 shadow-md transition">라틴 팝</a></li>
-                        </ul>
-                    </div>
-        </nav>
-        <!-- 배경 효과 -->
-    <div class="fixed inset-0 bg-gradient-to-br from-kpop-600/20 via-kpop-500/30 to-kpop-700/20 pointer-events-none"></div>
-    <div class="fixed inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3),transparent_50%)] pointer-events-none"></div>
-    <div class="fixed inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(220,38,38,0.2),transparent_50%)] pointer-events-none"></div>
+<body class="font-korean bg-gradient-to-br from-family-600 via-family-500 to-family-700 min-h-screen relative overflow-x-hidden">
+    <!-- 고급 배경 효과 -->
+    <div class="fixed inset-0 bg-gradient-to-br from-family-600/20 via-family-500/30 to-family-700/20 pointer-events-none"></div>
+    <div class="fixed inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(230,126,34,0.3),transparent_50%)] pointer-events-none animate-pulse-slow"></div>
+    <div class="fixed inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(211,84,0,0.2),transparent_50%)] pointer-events-none animate-pulse-slow"></div>
+    <div class="fixed inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_70%)] pointer-events-none animate-rotate-slow"></div>
     
-    <div class="relative z-10 max-w-6xl mx-auto px-4 py-8">
+    <!-- 떠다니는 장식 요소들 (모바일 최적화) -->
+    <div class="fixed top-10 left-4 text-3xl opacity-20 animate-float pointer-events-none">🎈</div>
+    <div class="fixed top-20 right-8 text-2xl opacity-20 animate-float pointer-events-none" style="animation-delay: 2s;">🎁</div>
+    <div class="fixed bottom-20 left-8 text-2xl opacity-20 animate-float pointer-events-none" style="animation-delay: 4s;">💐</div>
+    <div class="fixed bottom-10 right-4 text-3xl opacity-20 animate-float pointer-events-none" style="animation-delay: 1s;">🎉</div>
+    <div class="fixed top-30 left-1/2 text-2xl opacity-20 animate-float pointer-events-none" style="animation-delay: 3s;">👨‍👩‍👧‍👦</div>
+    
+    <div class="relative z-10 max-w-sm mx-auto px-3 py-4">
         <!-- 헤더 -->
-    <div class="text-center text-white mb-8 animate-slide-up">
-            <h1 class="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-kpop-100 to-kpop-200 bg-clip-text text-transparent animate-glow flex items-center justify-center gap-2">
-                <span style="font-size:1em;display:inline-flex;align-items:center;vertical-align:middle;">🎵</span>
-                K-POP 소개
-            </h1>
-            <p class="text-xl md:text-2xl opacity-90 font-light">
-                한국 대중음악의 세계로 여러분을 초대합니다!
-            </p>
-        </div>
-
-        <!-- K-POP 소개 -->
-        <div class="bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-12 mb-12 shadow-2xl border border-white/20 hover:shadow-kpop-500/20 transition-all duration-500 hover:-translate-y-2 animate-slide-up">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-8 bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent">
-                🌟 K-POP이란?
-            </h2>
-            <p class="text-lg md:text-xl text-gray-700 text-center leading-relaxed max-w-4xl mx-auto">
-                K-POP은 'Korean Pop'의 줄임말로, 한국의 대중음악을 의미합니다. 
-                전 세계적으로 사랑받는 한국의 문화 콘텐츠 중 하나로, 
-                음악뿐만 아니라 댄스, 패션, 뷰티 등 다양한 문화 요소를 포함합니다.
-            </p>
-        </div>
-
-        <!-- K-POP의 특징 -->
-        <div class="bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-12 mb-12 shadow-2xl border border-white/20 hover:shadow-kpop-500/20 transition-all duration-500 hover:-translate-y-2 animate-slide-up">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent">
-                ✨ K-POP의 특징
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="group bg-gradient-to-br from-kpop-50 to-kpop-100 rounded-2xl p-8 text-center border-2 border-kpop-200 hover:border-kpop-400 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <div class="text-6xl mb-6 group-hover:animate-float">🎭</div>
-                    <h3 class="text-xl font-bold text-kpop-800 mb-4">완벽한 퍼포먼스</h3>
-                    <p class="text-kpop-600 leading-relaxed">동기화된 댄스와 무대 연출로 시각적 즐거움을 제공합니다</p>
-                </div>
-                <div class="group bg-gradient-to-br from-kpop-50 to-kpop-100 rounded-2xl p-8 text-center border-2 border-kpop-200 hover:border-kpop-400 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <div class="text-6xl mb-6 group-hover:animate-float">🎨</div>
-                    <h3 class="text-xl font-bold text-kpop-800 mb-4">독특한 컨셉</h3>
-                    <p class="text-kpop-600 leading-relaxed">매번 새로운 테마와 스토리로 팬들을 사로잡습니다</p>
-                </div>
-                <div class="group bg-gradient-to-br from-kpop-50 to-kpop-100 rounded-2xl p-8 text-center border-2 border-kpop-200 hover:border-kpop-400 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <div class="text-6xl mb-6 group-hover:animate-float">🌍</div>
-                    <h3 class="text-xl font-bold text-kpop-800 mb-4">글로벌 진출</h3>
-                    <p class="text-kpop-600 leading-relaxed">전 세계 팬들과 소통하며 문화 교류의 다리가 됩니다</p>
-                </div>
-                <div class="group bg-gradient-to-br from-kpop-50 to-kpop-100 rounded-2xl p-8 text-center border-2 border-kpop-200 hover:border-kpop-400 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <div class="text-6xl mb-6 group-hover:animate-float">💝</div>
-                    <h3 class="text-xl font-bold text-kpop-800 mb-4">팬과의 소통</h3>
-                    <p class="text-kpop-600 leading-relaxed">SNS를 통한 적극적인 팬 서비스와 소통을 중시합니다</p>
-                </div>
+        <div class="text-center text-white mb-8 animate-slide-up">
+            <div class="mb-4 relative">
+                <div class="text-2xl mb-2 animate-bounce-slow">🎈🎁💐</div>
+                <h1 class="text-3xl font-bold mb-3 bg-gradient-to-r from-white via-family-100 to-family-200 bg-clip-text text-transparent animate-glow relative">
+                    👨‍👩‍👧‍👦 신우회 2024
+                    <div class="absolute -inset-1 bg-gradient-to-r from-family-500/20 to-family-600/20 rounded-lg blur opacity-75 animate-pulse"></div>
+                </h1>
+                <p class="text-sm opacity-90 font-light mb-3 animate-fade-in">
+                    어린이날 & 어버이날 특별 가족모임
+                </p>
             </div>
-        </div>
-
-        <!-- K-POP 역사 -->
-        <div class="bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-12 mb-12 shadow-2xl border border-white/20 hover:shadow-kpop-500/20 transition-all duration-500 hover:-translate-y-2 animate-slide-up">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent">
-                📚 K-POP의 역사
-            </h2>
-            <div class="relative max-w-4xl mx-auto">
-                <div class="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-kpop-500 to-kpop-600 rounded-full"></div>
-                <div class="space-y-12">
-                    <div class="relative pl-20 group">
-                        <div class="absolute left-6 top-2 w-4 h-4 bg-gradient-to-r from-kpop-500 to-kpop-600 rounded-full border-4 border-white shadow-lg group-hover:animate-pulse"></div>
-                        <div class="bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent text-2xl font-bold mb-2">1990년대</div>
-                        <div class="text-gray-700 text-lg leading-relaxed">서태지와 아이들, H.O.T 등 1세대 아이돌 그룹 등장</div>
+            <div class="bg-white/20 backdrop-blur-md rounded-2xl p-4 border-2 border-white/30 shadow-2xl relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-gradient-x"></div>
+                <div class="relative z-10">
+                    <div class="flex flex-col items-center gap-3">
+                        <div class="text-center animate-slide-in-left">
+                            <div class="bg-gradient-to-r from-pink-500/20 to-pink-600/20 rounded-xl p-3 mb-2">
+                                <p class="text-lg font-bold text-white mb-1">
+                                    📅 5월 5일 (일)
+                                </p>
+                                <p class="text-sm text-white/90 font-medium">어린이날</p>
+                            </div>
+                        </div>
+                        <div class="text-3xl animate-pulse-slow">💝</div>
+                        <div class="text-center animate-slide-in-right">
+                            <div class="bg-gradient-to-r from-blue-500/20 to-blue-600/20 rounded-xl p-3 mb-2">
+                                <p class="text-lg font-bold text-white mb-1">
+                                    📅 5월 8일 (수)
+                                </p>
+                                <p class="text-sm text-white/90 font-medium">어버이날</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="relative pl-20 group">
-                        <div class="absolute left-6 top-2 w-4 h-4 bg-gradient-to-r from-kpop-500 to-kpop-600 rounded-full border-4 border-white shadow-lg group-hover:animate-pulse"></div>
-                        <div class="bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent text-2xl font-bold mb-2">2000년대</div>
-                        <div class="text-gray-700 text-lg leading-relaxed">동방신기, 빅뱅, 소녀시대 등 2세대 아이돌 그룹의 전성기</div>
-                    </div>
-                    <div class="relative pl-20 group">
-                        <div class="absolute left-6 top-2 w-4 h-4 bg-gradient-to-r from-kpop-500 to-kpop-600 rounded-full border-4 border-white shadow-lg group-hover:animate-pulse"></div>
-                        <div class="bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent text-2xl font-bold mb-2">2010년대</div>
-                        <div class="text-gray-700 text-lg leading-relaxed">BTS, BLACKPINK 등 3세대 아이돌의 글로벌 성공</div>
-                    </div>
-                    <div class="relative pl-20 group">
-                        <div class="absolute left-6 top-2 w-4 h-4 bg-gradient-to-r from-kpop-500 to-kpop-600 rounded-full border-4 border-white shadow-lg group-hover:animate-pulse"></div>
-                        <div class="bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent text-2xl font-bold mb-2">2020년대</div>
-                        <div class="text-gray-700 text-lg leading-relaxed">NewJeans, IVE 등 4세대 아이돌의 새로운 트렌드 주도</div>
+                    <div class="mt-3 text-center">
+                        <p class="text-sm text-white/90 font-medium animate-fade-in">
+                            두 날의 의미를 함께 나누는 특별한 모임
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 대표 K-POP 그룹 -->
-        <div class="bg-gradient-to-br from-kpop-600 via-kpop-500 to-kpop-700 rounded-3xl p-8 md:p-12 mb-12 shadow-2xl border border-white/20 relative overflow-hidden animate-slide-up">
+        <!-- 행사 개요 -->
+        <div class="bg-white/95 backdrop-blur-md rounded-2xl p-4 mb-6 shadow-2xl border border-white/20 animate-scale-in relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-gradient-y"></div>
+            <div class="relative z-10">
+                <h2 class="text-2xl font-bold text-center mb-4 bg-gradient-to-r from-family-600 to-family-500 bg-clip-text text-transparent animate-fade-in">
+                    🎉 특별한 모임의 의미
+                </h2>
+                <div class="text-center mb-4 animate-slide-up">
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        어린이날과 어버이날의 의미를 함께 나누며, <br>
+                        <span class="text-family-600 font-bold bg-gradient-to-r from-family-500 to-family-600 bg-clip-text text-transparent">세대를 아우르는 사랑과 감사</span>를 표현하는 특별한 시간입니다.
+                    </p>
+                </div>
+                <div class="space-y-3 mb-4">
+                    <div class="bg-gradient-to-br from-pink-50 to-pink-100 rounded-xl p-3 border-2 border-pink-200 text-center animate-slide-in-left group">
+                        <div class="text-2xl mb-2 animate-bounce-slow group-hover:animate-wiggle">👶</div>
+                        <h3 class="text-sm font-bold text-pink-800 mb-2">어린이날</h3>
+                        <p class="text-pink-700 text-xs leading-relaxed">
+                            아이들의 꿈과 희망을 응원하고<br>
+                            가족의 미래를 함께 꿈꾸는 날
+                        </p>
+                    </div>
+                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-3 border-2 border-purple-200 text-center animate-scale-in group">
+                        <div class="text-2xl mb-2 animate-bounce-slow group-hover:animate-wiggle">💝</div>
+                        <h3 class="text-sm font-bold text-purple-800 mb-2">사랑의 다리</h3>
+                        <p class="text-purple-700 text-xs leading-relaxed">
+                            어린이와 어른이 서로를 이해하고<br>
+                            사랑을 나누는 소중한 시간
+                        </p>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-3 border-2 border-blue-200 text-center animate-slide-in-right group">
+                        <div class="text-2xl mb-2 animate-bounce-slow group-hover:animate-wiggle">👴</div>
+                        <h3 class="text-sm font-bold text-blue-800 mb-2">어버이날</h3>
+                        <p class="text-blue-700 text-xs leading-relaxed">
+                            부모님께 감사와 사랑을 전하며<br>
+                            가족의 소중함을 되새기는 날
+                        </p>
+                    </div>
+                </div>
+            </div>
+                <div class="space-y-3">
+                    <div class="bg-gradient-to-br from-family-50 to-family-100 rounded-xl p-3 border-2 border-family-200 animate-slide-in-left group">
+                        <h3 class="text-sm font-bold text-family-800 mb-2 flex items-center group-hover:animate-wiggle">
+                            📍 장소
+                        </h3>
+                        <p class="text-family-700 text-xs leading-relaxed">
+                            <strong>서울랜드 어드벤처</strong><br>
+                            경기도 과천시 광명로 181<br>
+                            <span class="text-family-600 text-xs">지하철 4호선 대공원역 3번 출구</span>
+                        </p>
+                    </div>
+                    <div class="bg-gradient-to-br from-family-50 to-family-100 rounded-xl p-3 border-2 border-family-200 animate-slide-in-right group">
+                        <h3 class="text-sm font-bold text-family-800 mb-2 flex items-center group-hover:animate-wiggle">
+                            ⏰ 시간
+                        </h3>
+                        <p class="text-family-700 text-xs leading-relaxed">
+                            <strong>오전 10:00</strong> - 집합<br>
+                            <strong>오전 10:30</strong> - 입장 및 개회식<br>
+                            <strong>오후 5:00</strong> - 해산<br>
+                            <span class="text-family-600 text-xs">※ 일정은 현장 상황에 따라 조정될 수 있습니다</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 진행 순서 -->
+        <div class="bg-white/95 backdrop-blur-md rounded-2xl p-4 mb-6 shadow-2xl border border-white/20 animate-scale-in relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-gradient-x"></div>
+            <div class="relative z-10">
+                <h2 class="text-2xl font-bold text-center mb-4 bg-gradient-to-r from-family-600 to-family-500 bg-clip-text text-transparent animate-fade-in">
+                    📋 진행 순서
+                </h2>
+                <div class="relative">
+                    <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-family-500 to-family-600 rounded-full animate-pulse-slow"></div>
+                    <div class="space-y-4">
+                        <div class="relative pl-12 group animate-slide-in-left">
+                            <div class="absolute left-3 top-1 w-2 h-2 bg-gradient-to-r from-family-500 to-family-600 rounded-full border-2 border-white shadow-lg group-hover:animate-pulse hover:scale-125 transition-all duration-300"></div>
+                            <div class="bg-gradient-to-r from-family-600 to-family-500 bg-clip-text text-transparent text-sm font-bold mb-1">10:00 - 10:30</div>
+                            <div class="text-gray-700 text-xs leading-relaxed">
+                                <strong>집합 및 인사</strong><br>
+                                서울랜드 정문 앞에서 가족별로 집합하여 인사 나누기
+                            </div>
+                        </div>
+                        <div class="relative pl-12 group animate-scale-in">
+                            <div class="absolute left-3 top-1 w-2 h-2 bg-gradient-to-r from-family-500 to-family-600 rounded-full border-2 border-white shadow-lg group-hover:animate-pulse hover:scale-125 transition-all duration-300"></div>
+                            <div class="bg-gradient-to-r from-family-600 to-family-500 bg-clip-text text-transparent text-sm font-bold mb-1">10:30 - 11:00</div>
+                            <div class="text-gray-700 text-xs leading-relaxed">
+                                <strong>개회식 및 감사 인사</strong><br>
+                                신우회 회장 인사말, 어린이날 & 어버이날 의미 되새기기, 2023년 회계보고
+                            </div>
+                        </div>
+                        <div class="relative pl-12 group animate-slide-in-right">
+                            <div class="absolute left-3 top-1 w-2 h-2 bg-gradient-to-r from-family-500 to-family-600 rounded-full border-2 border-white shadow-lg group-hover:animate-pulse hover:scale-125 transition-all duration-300"></div>
+                            <div class="bg-gradient-to-r from-family-600 to-family-500 bg-clip-text text-transparent text-sm font-bold mb-1">11:00 - 12:00</div>
+                            <div class="text-gray-700 text-xs leading-relaxed">
+                                <strong>특별 가족사진 촬영</strong><br>
+                                전체 가족사진, 3대 동반사진, 어린이 & 어버이 특별 포토존 촬영
+                            </div>
+                        </div>
+                        <div class="relative pl-12 group animate-slide-in-left">
+                            <div class="absolute left-3 top-1 w-2 h-2 bg-gradient-to-r from-family-500 to-family-600 rounded-full border-2 border-white shadow-lg group-hover:animate-pulse hover:scale-125 transition-all duration-300"></div>
+                            <div class="bg-gradient-to-r from-family-600 to-family-500 bg-clip-text text-transparent text-sm font-bold mb-1">12:00 - 13:30</div>
+                            <div class="text-gray-700 text-xs leading-relaxed">
+                                <strong>특별 점심식사</strong><br>
+                                어린이날 & 어버이날 기념 특별 메뉴와 함께하는 가족 식사
+                            </div>
+                        </div>
+                        <div class="relative pl-12 group animate-scale-in">
+                            <div class="absolute left-3 top-1 w-2 h-2 bg-gradient-to-r from-family-500 to-family-600 rounded-full border-2 border-white shadow-lg group-hover:animate-pulse hover:scale-125 transition-all duration-300"></div>
+                            <div class="bg-gradient-to-r from-family-600 to-family-500 bg-clip-text text-transparent text-sm font-bold mb-1">13:30 - 16:00</div>
+                            <div class="text-gray-700 text-xs leading-relaxed">
+                                <strong>세대교감 시간</strong><br>
+                                어린이와 어른이 함께 즐기는 어트랙션, 3대가 함께하는 특별 체험
+                            </div>
+                        </div>
+                        <div class="relative pl-12 group animate-slide-in-right">
+                            <div class="absolute left-3 top-1 w-2 h-2 bg-gradient-to-r from-family-500 to-family-600 rounded-full border-2 border-white shadow-lg group-hover:animate-pulse hover:scale-125 transition-all duration-300"></div>
+                            <div class="bg-gradient-to-r from-family-600 to-family-500 bg-clip-text text-transparent text-sm font-bold mb-1">16:00 - 17:00</div>
+                            <div class="text-gray-700 text-xs leading-relaxed">
+                                <strong>감사 인사 및 마무리</strong><br>
+                                어린이와 어버이에게 감사 인사, 소중한 추억과 함께 해산
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 회계보고 -->
+        <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-4 mb-6 shadow-2xl border border-white/20 animate-slide-up">
+            <h2 class="text-2xl font-bold text-center mb-4 bg-gradient-to-r from-family-600 to-family-500 bg-clip-text text-transparent">
+                💰 2023년 회계보고
+            </h2>
+            <div class="space-y-3">
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-3 border-2 border-green-200">
+                    <h3 class="text-sm font-bold text-green-800 mb-2 flex items-center">
+                        📈 수입
+                    </h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-700 text-xs">회비 수입</span>
+                            <span class="text-green-800 font-bold text-xs">₩2,400,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-700 text-xs">기타 수입</span>
+                            <span class="text-green-800 font-bold text-xs">₩150,000</span>
+                        </div>
+                        <div class="border-t border-green-300 pt-2 mt-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-green-800 font-bold text-sm">총 수입</span>
+                                <span class="text-green-800 font-bold text-sm">₩2,550,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-3 border-2 border-red-200">
+                    <h3 class="text-sm font-bold text-red-800 mb-2 flex items-center">
+                        📉 지출
+                    </h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-700 text-xs">2023년 가족모임 비용</span>
+                            <span class="text-red-800 font-bold text-xs">₩1,800,000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-700 text-xs">기타 운영비</span>
+                            <span class="text-red-800 font-bold text-xs">₩200,000</span>
+                        </div>
+                        <div class="border-t border-red-300 pt-2 mt-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-red-800 font-bold text-sm">총 지출</span>
+                                <span class="text-red-800 font-bold text-sm">₩2,000,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-3 border-2 border-blue-200">
+                <h3 class="text-sm font-bold text-blue-800 mb-2 text-center">
+                    💎 잔액 현황
+                </h3>
+                <div class="text-center">
+                    <div class="text-lg font-bold text-blue-800 mb-1">₩550,000</div>
+                    <p class="text-blue-700 text-xs">2024년 가족모임 준비금으로 활용 예정</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 참가 안내 -->
+        <div class="bg-gradient-to-br from-family-600 via-family-500 to-family-700 rounded-2xl p-4 mb-6 shadow-2xl border border-white/20 relative overflow-hidden animate-slide-up">
             <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse"></div>
             <div class="relative z-10">
-                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
-                    🎤 대표 K-POP 그룹
+                <h2 class="text-2xl font-bold text-center mb-4 text-white">
+                    📢 참가 안내
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="group bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                        <div class="text-3xl mb-4 group-hover:animate-bounce">🎤</div>
-                        <div class="text-xl font-bold text-white mb-2">BTS</div>
-                        <div class="text-white/80 text-sm">글로벌 슈퍼스타, 방탄소년단</div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="group bg-white/10 backdrop-blur-md rounded-xl p-3 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                        <div class="text-2xl mb-2 group-hover:animate-bounce">🎫</div>
+                        <div class="text-sm font-bold text-white mb-1">입장료</div>
+                        <div class="text-white/80 text-xs">성인: ₩15,000<br>어린이: ₩12,000</div>
                     </div>
                     <div class="group bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                        <div class="text-3xl mb-4 group-hover:animate-bounce">💄</div>
-                        <div class="text-xl font-bold text-white mb-2">BLACKPINK</div>
-                        <div class="text-white/80 text-sm">세계적인 걸그룹</div>
+                        <div class="text-4xl mb-4 group-hover:animate-bounce">🚗</div>
+                        <div class="text-xl font-bold text-white mb-2">주차</div>
+                        <div class="text-white/80 text-sm">주차장 이용 가능<br>주차비 별도</div>
                     </div>
                     <div class="group bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                        <div class="text-3xl mb-4 group-hover:animate-bounce">🌟</div>
-                        <div class="text-xl font-bold text-white mb-2">NewJeans</div>
-                        <div class="text-white/80 text-sm">4세대 대표 걸그룹</div>
+                        <div class="text-4xl mb-4 group-hover:animate-bounce">☔</div>
+                        <div class="text-xl font-bold text-white mb-2">우천시</div>
+                        <div class="text-white/80 text-sm">실내 시설 이용<br>일정 조정 가능</div>
                     </div>
                     <div class="group bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                        <div class="text-3xl mb-4 group-hover:animate-bounce">✨</div>
-                        <div class="text-xl font-bold text-white mb-2">IVE</div>
-                        <div class="text-white/80 text-sm">차세대 K-POP 아이콘</div>
+                        <div class="text-4xl mb-4 group-hover:animate-bounce">📱</div>
+                        <div class="text-xl font-bold text-white mb-2">연락처</div>
+                        <div class="text-white/80 text-sm">회장: 010-1234-5678<br>총무: 010-9876-5432</div>
                     </div>
                     <div class="group bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                        <div class="text-3xl mb-4 group-hover:animate-bounce">🎭</div>
-                        <div class="text-xl font-bold text-white mb-2">SEVENTEEN</div>
-                        <div class="text-white/80 text-sm">자체 제작 아이돌</div>
+                        <div class="text-4xl mb-4 group-hover:animate-bounce">🎁</div>
+                        <div class="text-xl font-bold text-white mb-2">준비물</div>
+                        <div class="text-white/80 text-sm">편한 복장<br>카메라 또는 스마트폰</div>
                     </div>
                     <div class="group bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                        <div class="text-3xl mb-4 group-hover:animate-bounce">💖</div>
-                        <div class="text-xl font-bold text-white mb-2">TWICE</div>
-                        <div class="text-white/80 text-sm">글로벌 걸그룹</div>
+                        <div class="text-4xl mb-4 group-hover:animate-bounce">⏰</div>
+                        <div class="text-xl font-bold text-white mb-2">신청 마감</div>
+                        <div class="text-white/80 text-sm">4월 25일(목)까지<br>참가 의사 전달</div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- K-POP의 영향 -->
-        <div class="bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-12 mb-12 shadow-2xl border border-white/20 hover:shadow-kpop-500/20 transition-all duration-500 hover:-translate-y-2 animate-slide-up">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-8 bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent">
-                🌏 K-POP의 세계적 영향
+        <!-- 특별 이벤트 -->
+        <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-4 mb-6 shadow-2xl border border-white/20 animate-slide-up">
+            <h2 class="text-2xl font-bold text-center mb-4 bg-gradient-to-r from-family-600 to-family-500 bg-clip-text text-transparent">
+                🎊 특별 이벤트
             </h2>
-            <p class="text-lg md:text-xl text-gray-700 text-center leading-relaxed max-w-4xl mx-auto">
-                K-POP은 단순한 음악 장르를 넘어서 한국 문화를 전 세계에 알리는 
-                문화 대사 역할을 하고 있습니다. 한류 열풍을 통해 한국의 언어, 
-                음식, 패션, 뷰티 등 다양한 문화 요소들이 전 세계에 소개되었고, 
-                이는 문화 교류와 상호 이해 증진에 큰 기여를 하고 있습니다.
-            </p>
+            <div class="space-y-3">
+                <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-xl p-3 border-2 border-yellow-200">
+                    <h3 class="text-sm font-bold text-yellow-800 mb-2 flex items-center">
+                        🏆 가족사진 콘테스트
+                    </h3>
+                    <p class="text-yellow-700 text-xs leading-relaxed">
+                        가장 예쁜 가족사진을 찍은 가족에게<br>
+                        <strong>상금 ₩100,000</strong>과<br>
+                        <strong>다음 해 회비 면제</strong> 혜택을 드립니다!
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-3 border-2 border-purple-200">
+                    <h3 class="text-sm font-bold text-purple-800 mb-2 flex items-center">
+                        🎁 추첨 이벤트
+                    </h3>
+                    <p class="text-purple-700 text-xs leading-relaxed">
+                        참가하신 모든 가족을 대상으로<br>
+                        <strong>상품권 10만원권 3명</strong>과<br>
+                        <strong>기념품 세트</strong>를 추첨으로 드립니다!
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-pink-50 to-pink-100 rounded-xl p-3 border-2 border-pink-200">
+                    <h3 class="text-sm font-bold text-pink-800 mb-2 flex items-center">
+                        💝 감사 인사 이벤트
+                    </h3>
+                    <p class="text-pink-700 text-xs leading-relaxed">
+                        어린이와 어버이에게<br>
+                        <strong>감사 인사말</strong>을 전하는<br>
+                        <strong>특별한 시간</strong>을 가집니다!
+                    </p>
+                </div>
+            </div>
         </div>
 
-        <!-- 최근 K-팝 뉴스 -->
-        <section class="mt-8">
-          <h2 class="text-2xl font-bold mb-4">최근 K-팝 뉴스</h2>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>BTS, BLACKPINK 등 글로벌 K-팝 그룹의 월드투어와 신곡 발표가 이어지고 있습니다.</li>
-            <li>K-팝 아티스트들이 미국 빌보드 차트, 유럽·남미 등 해외 시장에서 꾸준히 좋은 성적을 내고 있습니다.</li>
-            <li>다양한 K-팝 페스티벌과 글로벌 팬미팅이 개최되어, 한국 음악의 세계적 영향력이 더욱 커지고 있습니다.</li>
-            <li>뉴진스, 세븐틴 등 신인 그룹의 성장과, K-팝의 AI·테크 활용(가상 팬미팅, AI 뮤직 등)도 주목받고 있습니다.</li>
-          </ul>
-        </section>
-
         <!-- 푸터 -->
-        <div class="bg-gradient-to-r from-kpop-600/80 via-kpop-500/60 to-kpop-700/80 backdrop-blur-md rounded-3xl p-8 md:p-12 text-center border border-white/20 shadow-2xl">
-            <p class="text-white text-xl md:text-2xl font-semibold mb-2">🎵 K-POP으로 하나되는 세계 🌍</p>
-            <p class="text-white/90 text-lg">한국의 대중음악이 전 세계를 감동시키고 있습니다</p>
+        <div class="bg-gradient-to-r from-family-600/80 via-family-500/60 to-family-700/80 backdrop-blur-md rounded-2xl p-4 text-center border border-white/20 shadow-2xl">
+            <div class="mb-4">
+                <div class="text-2xl mb-2 animate-bounce-slow">🎈💐🎁</div>
+                <p class="text-white text-sm font-semibold mb-2">👨‍👩‍👧‍👦 신우회 특별 가족모임에 많은 참여 부탁드립니다! 🎉</p>
+                <p class="text-white/90 text-xs">어린이날과 어버이날의 의미를 함께 나누며, 세대를 아우르는 사랑을 나누어요!</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-3 mb-4">
+                <p class="text-white font-medium text-sm mb-1">💝 특별한 의미</p>
+                <p class="text-white/90 text-xs">
+                    어린이들의 꿈과 희망을 응원하고, 부모님께 감사와 사랑을 전하는<br>
+                    세대를 아우르는 소중한 시간이 될 것입니다.
+                </p>
+            </div>
+            <div class="text-white/80 text-xs">
+                <p>문의사항이 있으시면 언제든 연락주세요</p>
+                <p>신우회 운영진 일동</p>
+            </div>
         </div>
     </div>
 </body>
