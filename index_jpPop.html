@@ -32,44 +32,71 @@
       font-weight: 500;
       display: inline-block;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       nav .max-w-6xl {
         flex-direction: column;
-        gap: 8px;
-        padding: 0.5rem 0.5rem;
+        gap: 12px;
+        padding: 1rem;
       }
       nav ul {
         flex-wrap: wrap;
-        gap: 4px;
+        gap: 8px;
         justify-content: center;
       }
-          nav li a {
-            font-size: 0.4rem;  // Adjusted font size
-            padding: 0.18rem 0.3rem;  // Adjusted padding
-          }
+      nav li a {
+        font-size: 0.75rem;
+        padding: 0.5rem 0.75rem;
+      }
       h1 {
-        font-size: 2.2rem !important;
+        font-size: 2.5rem !important;
+        line-height: 1.2;
+      }
+      h2 {
+        font-size: 1.4rem !important;
+      }
+      section {
+        padding: 16px 12px;
+        margin-bottom: 16px;
+      }
+      .max-w-6xl {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+      .text-6xl {
+        font-size: 2.5rem !important;
+      }
+      .text-xl {
+        font-size: 1.1rem !important;
+      }
+    }
+    @media (max-width: 480px) {
+      nav li a {
+        font-size: 0.65rem;
+        padding: 0.4rem 0.6rem;
+      }
+      h1 {
+        font-size: 2rem !important;
       }
       h2 {
         font-size: 1.2rem !important;
       }
       section {
-        padding: 12px 4px;
+        padding: 12px 8px;
         margin-bottom: 12px;
       }
-      .max-w-6xl {
-        padding-left: 0.5rem !important;
-        padding-right: 0.5rem !important;
+      .text-6xl {
+        font-size: 2rem !important;
       }
     }
     </style>
 </head>
 <body class="font-korean bg-gradient-to-br from-kpop-600 via-kpop-500 to-kpop-700 min-h-screen">
+    <!-- 네비게이션 바 -->
     <nav class="w-full bg-white/80 backdrop-blur-md shadow-lg border-b border-kpop-200 sticky top-0 z-20">
       <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-3 rounded-2xl bg-white/60 backdrop-blur-xl shadow-2xl border border-white/30">
         <div class="text-2xl font-bold text-kpop-700 tracking-tight drop-shadow-lg">🌏 글로벌 팝 문화</div>
         <ul class="flex space-x-6 text-lg font-semibold">
-          <li><a href="index_kPop.html" class="px-4 py-2 rounded-xl bg-white/30 hover:bg-kpop-100/60 text-kpop-700 hover:text-kpop-500 shadow-md transition">K-POP</a></li>
+          <li><a href="index.html" class="px-4 py-2 rounded-xl bg-white/30 hover:bg-kpop-100/60 text-kpop-700 hover:text-kpop-500 shadow-md transition">K-POP</a></li>
           <li><a href="index_usPop.html" class="px-4 py-2 rounded-xl bg-white/30 hover:bg-kpop-100/60 text-kpop-700 hover:text-kpop-500 shadow-md transition">미국 팝</a></li>
           <li><a href="index_ukPop.html" class="px-4 py-2 rounded-xl bg-white/30 hover:bg-kpop-100/60 text-kpop-700 hover:text-kpop-500 shadow-md transition">영국 팝</a></li>
           <li><a href="index_jpPop.html" class="px-4 py-2 rounded-xl bg-white/30 hover:bg-kpop-100/60 text-kpop-700 hover:text-kpop-500 shadow-md transition">일본 팝</a></li>
@@ -77,35 +104,204 @@
         </ul>
       </div>
     </nav>
+    <!-- 배경 효과 (일본 팝 테마) -->
+    <div class="fixed inset-0 bg-gradient-to-br from-red-600/20 via-white/30 to-red-700/20 pointer-events-none"></div>
+    <div class="fixed inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(220,38,38,0.3),transparent_50%)] pointer-events-none"></div>
+    <div class="fixed inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.2),transparent_50%)] pointer-events-none"></div>
     <div class="relative z-10 max-w-6xl mx-auto px-4 py-8">
+        <!-- 헤더 -->
   <div class="text-center text-white mb-8 animate-slide-up">
             <h1 class="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-kpop-100 to-kpop-200 bg-clip-text text-transparent animate-glow flex items-center justify-center gap-2">
                 <span style="font-size:1em;display:inline-flex;align-items:center;vertical-align:middle;">🎤</span>
                 일본 팝 소개
             </h1>
-            <p class="text-xl md:text-2xl opacity-90 font-light">일본 대중음악의 독창성과 다양성을 만나보세요!</p>
+            <p class="text-xl md:text-2xl opacity-90 font-light">
+                일본 대중음악의 독창성과 다양성을 만나보세요!
+            </p>
         </div>
-        <section>
-            <h2 class="text-3xl font-bold mb-4">일본 팝의 특징</h2>
-            <ul class="list-disc pl-5 space-y-2">
-                <li>J-POP, 애니송, 아이돌, 록 등 다양한 장르</li>
-                <li>독특한 멜로디와 감성, 서브컬처와의 결합</li>
-                <li>아라시, 퍼퓸, 요네즈 켄시 등 인기 아티스트</li>
+
+        <!-- 일본 팝 소개 -->
+        <div class="bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-12 mb-12 shadow-2xl border border-white/20 hover:shadow-kpop-500/20 transition-all duration-500 hover:-translate-y-2 animate-slide-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-8 bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent">
+                🌟 일본 팝이란?
+            </h2>
+            <p class="text-lg md:text-xl text-gray-700 text-center leading-relaxed max-w-4xl mx-auto">
+                일본 팝(J-POP)은 일본에서 탄생한 대중음악으로, 독특한 멜로디와 감성을 특징으로 합니다. 
+                애니메이션, 게임, 아이돌 문화와 깊이 연관되어 있으며, 
+                아시아 및 글로벌 시장에서 큰 인기를 얻고 있는 음악 장르입니다.
+            </p>
+        </div>
+
+        <!-- 일본 팝의 특징 -->
+        <div class="bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-12 mb-12 shadow-2xl border border-white/20 hover:shadow-kpop-500/20 transition-all duration-500 hover:-translate-y-2 animate-slide-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent">
+                ✨ 일본 팝의 특징
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="group bg-gradient-to-br from-kpop-50 to-kpop-100 rounded-2xl p-8 text-center border-2 border-kpop-200 hover:border-kpop-400 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="text-6xl mb-6 group-hover:animate-float">🎌</div>
+                    <h3 class="text-xl font-bold text-kpop-800 mb-4">독특한 멜로디</h3>
+                    <p class="text-kpop-600 leading-relaxed">일본만의 독특한 음악적 감성과 멜로디</p>
+                </div>
+                <div class="group bg-gradient-to-br from-kpop-50 to-kpop-100 rounded-2xl p-8 text-center border-2 border-kpop-200 hover:border-kpop-400 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="text-6xl mb-6 group-hover:animate-float">🎭</div>
+                    <h3 class="text-xl font-bold text-kpop-800 mb-4">아이돌 문화</h3>
+                    <p class="text-kpop-600 leading-relaxed">AKB48, 아라시 등 독특한 아이돌 시스템</p>
+                </div>
+                <div class="group bg-gradient-to-br from-kpop-50 to-kpop-100 rounded-2xl p-8 text-center border-2 border-kpop-200 hover:border-kpop-400 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="text-6xl mb-6 group-hover:animate-float">🎮</div>
+                    <h3 class="text-xl font-bold text-kpop-800 mb-4">서브컬처 융합</h3>
+                    <p class="text-kpop-600 leading-relaxed">애니메이션, 게임과의 깊은 연관성</p>
+                </div>
+                <div class="group bg-gradient-to-br from-kpop-50 to-kpop-100 rounded-2xl p-8 text-center border-2 border-kpop-200 hover:border-kpop-400 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="text-6xl mb-6 group-hover:animate-float">🌏</div>
+                    <h3 class="text-xl font-bold text-kpop-800 mb-4">글로벌 인기</h3>
+                    <p class="text-kpop-600 leading-relaxed">아시아 및 전 세계에서의 높은 인기</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 일본 팝 역사 -->
+        <div class="bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-12 mb-12 shadow-2xl border border-white/20 hover:shadow-kpop-500/20 transition-all duration-500 hover:-translate-y-2 animate-slide-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent">
+                📚 일본 팝의 역사
+            </h2>
+            <div class="relative max-w-4xl mx-auto">
+                <div class="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-kpop-500 to-kpop-600 rounded-full"></div>
+                <div class="space-y-12">
+                    <div class="relative pl-20 group">
+                        <div class="absolute left-6 top-2 w-4 h-4 bg-gradient-to-r from-kpop-500 to-kpop-600 rounded-full border-4 border-white shadow-lg group-hover:animate-pulse"></div>
+                        <div class="bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent text-2xl font-bold mb-2">1970-80년대</div>
+                        <div class="text-gray-700 text-lg leading-relaxed">마츠다 세이코, 나카모리 아키나 등 아이돌의 황금기</div>
+                    </div>
+                    <div class="relative pl-20 group">
+                        <div class="absolute left-6 top-2 w-4 h-4 bg-gradient-to-r from-kpop-500 to-kpop-600 rounded-full border-4 border-white shadow-lg group-hover:animate-pulse"></div>
+                        <div class="bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent text-2xl font-bold mb-2">1990년대</div>
+                        <div class="text-gray-700 text-lg leading-relaxed">SMAP, 아무로 나미에 등 J-POP의 전성기</div>
+                    </div>
+                    <div class="relative pl-20 group">
+                        <div class="absolute left-6 top-2 w-4 h-4 bg-gradient-to-r from-kpop-500 to-kpop-600 rounded-full border-4 border-white shadow-lg group-hover:animate-pulse"></div>
+                        <div class="bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent text-2xl font-bold mb-2">2000년대</div>
+                        <div class="text-gray-700 text-lg leading-relaxed">아라시, 퍼퓸 등 현대 J-POP의 확립</div>
+                    </div>
+                    <div class="relative pl-20 group">
+                        <div class="absolute left-6 top-2 w-4 h-4 bg-gradient-to-r from-kpop-500 to-kpop-600 rounded-full border-4 border-white shadow-lg group-hover:animate-pulse"></div>
+                        <div class="bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent text-2xl font-bold mb-2">2010년대-현재</div>
+                        <div class="text-gray-700 text-lg leading-relaxed">요네즈 켄시, King & Prince 등 새로운 트렌드</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 대표 일본 팝 아티스트 -->
+        <div class="bg-gradient-to-br from-kpop-600 via-kpop-500 to-kpop-700 rounded-3xl p-8 md:p-12 mb-12 shadow-2xl border border-white/20 relative overflow-hidden animate-slide-up">
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+                    🎤 대표 일본 팝 아티스트
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="group bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="text-3xl mb-4 group-hover:animate-bounce">🎌</div>
+                        <div class="text-xl font-bold text-white mb-2">아라시</div>
+                        <div class="text-white/80 text-sm">J-POP의 대표 그룹</div>
+                    </div>
+                    <div class="group bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="text-3xl mb-4 group-hover:animate-bounce">🎭</div>
+                        <div class="text-xl font-bold text-white mb-2">퍼퓸</div>
+                        <div class="text-white/80 text-sm">일렉트로 팝의 선구자</div>
+                    </div>
+                    <div class="group bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="text-3xl mb-4 group-hover:animate-bounce">🎵</div>
+                        <div class="text-xl font-bold text-white mb-2">요네즈 켄시</div>
+                        <div class="text-white/80 text-sm">현대 J-POP의 아이콘</div>
+                    </div>
+                    <div class="group bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="text-3xl mb-4 group-hover:animate-bounce">👑</div>
+                        <div class="text-xl font-bold text-white mb-2">King & Prince</div>
+                        <div class="text-white/80 text-sm">차세대 아이돌 그룹</div>
+                    </div>
+                    <div class="group bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="text-3xl mb-4 group-hover:animate-bounce">🎤</div>
+                        <div class="text-xl font-bold text-white mb-2">오피셜히게단디즘</div>
+                        <div class="text-white/80 text-sm">독특한 컨셉의 그룹</div>
+                    </div>
+                    <div class="group bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="text-3xl mb-4 group-hover:animate-bounce">🎮</div>
+                        <div class="text-xl font-bold text-white mb-2">LiSA</div>
+                        <div class="text-white/80 text-sm">애니송의 여왕</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 일본 팝의 영향 -->
+        <div class="bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-12 mb-12 shadow-2xl border border-white/20 hover:shadow-kpop-500/20 transition-all duration-500 hover:-translate-y-2 animate-slide-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-8 bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent">
+                🌏 일본 팝의 세계적 영향
+            </h2>
+            <p class="text-lg md:text-xl text-gray-700 text-center leading-relaxed max-w-4xl mx-auto">
+                일본 팝은 애니메이션, 게임, 패션 등 일본 문화와 깊이 융합되어 
+                아시아 및 글로벌 시장에서 큰 인기를 얻고 있습니다. 
+                독특한 아이돌 시스템과 서브컬처와의 연계를 통해 
+                전 세계 팬들에게 새로운 음악 경험을 제공하고 있습니다.
+            </p>
+        </div>
+
+        <!-- 최신 일본 팝 뉴스 -->
+        <div class="bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-12 mb-12 shadow-2xl border border-white/20 hover:shadow-kpop-500/20 transition-all duration-500 hover:-translate-y-2 animate-slide-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent">
+                📰 최신 일본 팝 뉴스
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-kpop-50 to-kpop-100 rounded-2xl p-6 border-2 border-kpop-200 hover:border-kpop-400 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-center mb-4">
+                        <div class="text-3xl mr-3">🔥</div>
+                        <h3 class="text-xl font-bold text-kpop-800">2024년 핫 이슈</h3>
+                    </div>
+                    <ul class="space-y-3 text-kpop-700">
+                        <li class="flex items-start">
+                            <span class="text-kpop-500 mr-2">•</span>
+                            <span>요네즈 켄시, 새로운 앨범으로 컴백</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-kpop-500 mr-2">•</span>
+                            <span>King & Prince, 글로벌 활동 확대</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-kpop-500 mr-2">•</span>
+                            <span>애니송의 글로벌 인기 상승</span>
+                        </li>
             </ul>
-        </section>
-        <section>
-            <h2 class="text-3xl font-bold mb-4">대표 아티스트</h2>
-            <ul class="list-disc pl-5 space-y-2">
-                <li>아라시, 퍼퓸, 요네즈 켄시, 오피셜히게단디즘, King & Prince 등</li>
+                </div>
+                <div class="bg-gradient-to-br from-kpop-50 to-kpop-100 rounded-2xl p-6 border-2 border-kpop-200 hover:border-kpop-400 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-center mb-4">
+                        <div class="text-3xl mr-3">🌍</div>
+                        <h3 class="text-xl font-bold text-kpop-800">글로벌 성과</h3>
+                    </div>
+                    <ul class="space-y-3 text-kpop-700">
+                        <li class="flex items-start">
+                            <span class="text-kpop-500 mr-2">•</span>
+                            <span>J-POP의 아시아 시장 진출 확대</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-kpop-500 mr-2">•</span>
+                            <span>애니메이션과 음악의 융합 트렌드</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-kpop-500 mr-2">•</span>
+                            <span>일본 아이돌 문화의 세계적 확산</span>
+                        </li>
             </ul>
-        </section>
-        <section>
-            <h2 class="text-3xl font-bold mb-4">세계적 영향력</h2>
-            <ul class="list-disc pl-5 space-y-2">
-                <li>애니메이션, 게임, 패션 등 일본 문화와의 융합</li>
-                <li>아시아 및 글로벌 시장에서의 인기</li>
-            </ul>
-        </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- 푸터 -->
+        <div class="bg-gradient-to-r from-kpop-600/80 via-kpop-500/60 to-kpop-700/80 backdrop-blur-md rounded-3xl p-8 md:p-12 text-center border border-white/20 shadow-2xl">
+            <p class="text-white text-xl md:text-2xl font-semibold mb-2">🎵 일본 팝으로 하나되는 세계 🌍</p>
+            <p class="text-white/90 text-lg">일본의 대중음악이 전 세계를 감동시키고 있습니다</p>
+        </div>
     </div>
 </body>
 </html>

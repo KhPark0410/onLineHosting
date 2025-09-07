@@ -32,48 +32,71 @@
       font-weight: 500;
       display: inline-block;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       nav .max-w-6xl {
         flex-direction: column;
-        gap: 8px;
-        padding: 0.5rem 0.5rem;
+        gap: 12px;
+        padding: 1rem;
       }
       nav ul {
         flex-wrap: wrap;
-        gap: 4px;
+        gap: 8px;
         justify-content: center;
       }
-        nav li a {
-          font-size: 0.4rem;
-          padding: 0.18rem 0.3rem;
-        }
-        nav li a {
-          font-size: 0.4rem;
-          padding: 0.18rem 0.3rem;
-        }
+      nav li a {
+        font-size: 0.75rem;
+        padding: 0.5rem 0.75rem;
+      }
       h1 {
-        font-size: 2.2rem !important;
+        font-size: 2.5rem !important;
+        line-height: 1.2;
+      }
+      h2 {
+        font-size: 1.4rem !important;
+      }
+      section {
+        padding: 16px 12px;
+        margin-bottom: 16px;
+      }
+      .max-w-6xl {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+      .text-6xl {
+        font-size: 2.5rem !important;
+      }
+      .text-xl {
+        font-size: 1.1rem !important;
+      }
+    }
+    @media (max-width: 480px) {
+      nav li a {
+        font-size: 0.65rem;
+        padding: 0.4rem 0.6rem;
+      }
+      h1 {
+        font-size: 2rem !important;
       }
       h2 {
         font-size: 1.2rem !important;
       }
       section {
-        padding: 12px 4px;
+        padding: 12px 8px;
         margin-bottom: 12px;
       }
-      .max-w-6xl {
-        padding-left: 0.5rem !important;
-        padding-right: 0.5rem !important;
+      .text-6xl {
+        font-size: 2rem !important;
       }
     }
     </style>
 </head>
 <body class="font-korean bg-gradient-to-br from-kpop-600 via-kpop-500 to-kpop-700 min-h-screen">
+    <!-- 네비게이션 바 -->
     <nav class="w-full bg-white/80 backdrop-blur-md shadow-lg border-b border-kpop-200 sticky top-0 z-20">
       <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-3 rounded-2xl bg-white/60 backdrop-blur-xl shadow-2xl border border-white/30">
         <div class="text-2xl font-bold text-kpop-700 tracking-tight drop-shadow-lg">🌏 글로벌 팝 문화</div>
         <ul class="flex space-x-6 text-lg font-semibold">
-          <li><a href="index_kPop.html" class="px-4 py-2 rounded-xl bg-white/30 hover:bg-kpop-100/60 text-kpop-700 hover:text-kpop-500 shadow-md transition">K-POP</a></li>
+          <li><a href="index.html" class="px-4 py-2 rounded-xl bg-white/30 hover:bg-kpop-100/60 text-kpop-700 hover:text-kpop-500 shadow-md transition">K-POP</a></li>
           <li><a href="index_usPop.html" class="px-4 py-2 rounded-xl bg-white/30 hover:bg-kpop-100/60 text-kpop-700 hover:text-kpop-500 shadow-md transition">미국 팝</a></li>
           <li><a href="index_ukPop.html" class="px-4 py-2 rounded-xl bg-white/30 hover:bg-kpop-100/60 text-kpop-700 hover:text-kpop-500 shadow-md transition">영국 팝</a></li>
           <li><a href="index_jpPop.html" class="px-4 py-2 rounded-xl bg-white/30 hover:bg-kpop-100/60 text-kpop-700 hover:text-kpop-500 shadow-md transition">일본 팝</a></li>
@@ -81,35 +104,203 @@
         </ul>
       </div>
     </nav>
+    <!-- 배경 효과 (영국 팝 테마) -->
+    <div class="fixed inset-0 bg-gradient-to-br from-red-600/20 via-blue-500/30 to-red-700/20 pointer-events-none"></div>
+    <div class="fixed inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(220,38,38,0.3),transparent_50%)] pointer-events-none"></div>
+    <div class="fixed inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.2),transparent_50%)] pointer-events-none"></div>
     <div class="relative z-10 max-w-6xl mx-auto px-4 py-8">
+        <!-- 헤더 -->
   <div class="text-center text-white mb-8 animate-slide-up">
             <h1 class="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-kpop-100 to-kpop-200 bg-clip-text text-transparent animate-glow flex items-center justify-center gap-2">
                 <span style="font-size:1em;display:inline-flex;align-items:center;vertical-align:middle;">🎸</span>
                 영국 팝 소개
             </h1>
-            <p class="text-xl md:text-2xl opacity-90 font-light">영국 대중음악의 전통과 혁신을 만나보세요!</p>
+            <p class="text-xl md:text-2xl opacity-90 font-light">
+                영국 대중음악의 전통과 혁신을 만나보세요!
+            </p>
         </div>
-        <section>
-            <h2 class="text-3xl font-bold mb-4">영국 팝의 특징</h2>
-            <ul class="list-disc pl-5 space-y-2">
-                <li>록, 브릿팝, 일렉트로닉, 소울 등 다양한 장르</li>
-                <li>비틀즈, 퀸, 아델 등 세계적인 아티스트 배출</li>
-                <li>혁신적인 음악 실험과 문화적 영향력</li>
+
+        <!-- 영국 팝 소개 -->
+        <div class="bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-12 mb-12 shadow-2xl border border-white/20 hover:shadow-kpop-500/20 transition-all duration-500 hover:-translate-y-2 animate-slide-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-8 bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent">
+                🌟 영국 팝이란?
+            </h2>
+            <p class="text-lg md:text-xl text-gray-700 text-center leading-relaxed max-w-4xl mx-auto">
+                영국 팝은 영국에서 탄생한 대중음악으로, 록, 브릿팝, 일렉트로닉, 소울 등 
+                다양한 장르를 포괄합니다. 비틀즈부터 현재까지 혁신적인 음악 실험과 
+                문화적 영향력을 통해 전 세계 음악 트렌드를 주도하고 있습니다.
+            </p>
+        </div>
+
+        <!-- 영국 팝의 특징 -->
+        <div class="bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-12 mb-12 shadow-2xl border border-white/20 hover:shadow-kpop-500/20 transition-all duration-500 hover:-translate-y-2 animate-slide-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent">
+                ✨ 영국 팝의 특징
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="group bg-gradient-to-br from-kpop-50 to-kpop-100 rounded-2xl p-8 text-center border-2 border-kpop-200 hover:border-kpop-400 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="text-6xl mb-6 group-hover:animate-float">🎸</div>
+                    <h3 class="text-xl font-bold text-kpop-800 mb-4">록의 발상지</h3>
+                    <p class="text-kpop-600 leading-relaxed">비틀즈, 롤링 스톤즈 등 록의 전설들이 탄생한 땅</p>
+                </div>
+                <div class="group bg-gradient-to-br from-kpop-50 to-kpop-100 rounded-2xl p-8 text-center border-2 border-kpop-200 hover:border-kpop-400 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="text-6xl mb-6 group-hover:animate-float">🎭</div>
+                    <h3 class="text-xl font-bold text-kpop-800 mb-4">브릿팝 문화</h3>
+                    <p class="text-kpop-600 leading-relaxed">오아시스, 블러 등 브릿팝의 독특한 문화 형성</p>
+                </div>
+                <div class="group bg-gradient-to-br from-kpop-50 to-kpop-100 rounded-2xl p-8 text-center border-2 border-kpop-200 hover:border-kpop-400 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="text-6xl mb-6 group-hover:animate-float">🎵</div>
+                    <h3 class="text-xl font-bold text-kpop-800 mb-4">음악적 혁신</h3>
+                    <p class="text-kpop-600 leading-relaxed">일렉트로닉, 얼터너티브 등 새로운 장르 개척</p>
+                </div>
+                <div class="group bg-gradient-to-br from-kpop-50 to-kpop-100 rounded-2xl p-8 text-center border-2 border-kpop-200 hover:border-kpop-400 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="text-6xl mb-6 group-hover:animate-float">🌍</div>
+                    <h3 class="text-xl font-bold text-kpop-800 mb-4">글로벌 영향력</h3>
+                    <p class="text-kpop-600 leading-relaxed">전 세계 음악 트렌드와 문화에 지속적인 영향</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 영국 팝 역사 -->
+        <div class="bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-12 mb-12 shadow-2xl border border-white/20 hover:shadow-kpop-500/20 transition-all duration-500 hover:-translate-y-2 animate-slide-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent">
+                📚 영국 팝의 역사
+            </h2>
+            <div class="relative max-w-4xl mx-auto">
+                <div class="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-kpop-500 to-kpop-600 rounded-full"></div>
+                <div class="space-y-12">
+                    <div class="relative pl-20 group">
+                        <div class="absolute left-6 top-2 w-4 h-4 bg-gradient-to-r from-kpop-500 to-kpop-600 rounded-full border-4 border-white shadow-lg group-hover:animate-pulse"></div>
+                        <div class="bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent text-2xl font-bold mb-2">1960년대</div>
+                        <div class="text-gray-700 text-lg leading-relaxed">비틀즈, 롤링 스톤즈 등 브리티시 인베이전</div>
+                    </div>
+                    <div class="relative pl-20 group">
+                        <div class="absolute left-6 top-2 w-4 h-4 bg-gradient-to-r from-kpop-500 to-kpop-600 rounded-full border-4 border-white shadow-lg group-hover:animate-pulse"></div>
+                        <div class="bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent text-2xl font-bold mb-2">1970년대</div>
+                        <div class="text-gray-700 text-lg leading-relaxed">퀸, 레드 제플린 등 프로그레시브 록의 시대</div>
+                    </div>
+                    <div class="relative pl-20 group">
+                        <div class="absolute left-6 top-2 w-4 h-4 bg-gradient-to-r from-kpop-500 to-kpop-600 rounded-full border-4 border-white shadow-lg group-hover:animate-pulse"></div>
+                        <div class="bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent text-2xl font-bold mb-2">1990년대</div>
+                        <div class="text-gray-700 text-lg leading-relaxed">오아시스, 블러 등 브릿팝의 황금기</div>
+                    </div>
+                    <div class="relative pl-20 group">
+                        <div class="absolute left-6 top-2 w-4 h-4 bg-gradient-to-r from-kpop-500 to-kpop-600 rounded-full border-4 border-white shadow-lg group-hover:animate-pulse"></div>
+                        <div class="bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent text-2xl font-bold mb-2">2000년대-현재</div>
+                        <div class="text-gray-700 text-lg leading-relaxed">콜드플레이, 아델, 에드 시런 등 현대 영국 팝</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 대표 영국 팝 아티스트 -->
+        <div class="bg-gradient-to-br from-kpop-600 via-kpop-500 to-kpop-700 rounded-3xl p-8 md:p-12 mb-12 shadow-2xl border border-white/20 relative overflow-hidden animate-slide-up">
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+                    🎤 대표 영국 팝 아티스트
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="group bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="text-3xl mb-4 group-hover:animate-bounce">🎸</div>
+                        <div class="text-xl font-bold text-white mb-2">비틀즈</div>
+                        <div class="text-white/80 text-sm">록의 전설, Fab Four</div>
+                    </div>
+                    <div class="group bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="text-3xl mb-4 group-hover:animate-bounce">👑</div>
+                        <div class="text-xl font-bold text-white mb-2">퀸</div>
+                        <div class="text-white/80 text-sm">프로그레시브 록의 제왕</div>
+                    </div>
+                    <div class="group bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="text-3xl mb-4 group-hover:animate-bounce">🎵</div>
+                        <div class="text-xl font-bold text-white mb-2">아델</div>
+                        <div class="text-white/80 text-sm">소울 팝의 여제</div>
+                    </div>
+                    <div class="group bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="text-3xl mb-4 group-hover:animate-bounce">🎤</div>
+                        <div class="text-xl font-bold text-white mb-2">콜드플레이</div>
+                        <div class="text-white/80 text-sm">얼터너티브 록의 대표</div>
+                    </div>
+                    <div class="group bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="text-3xl mb-4 group-hover:animate-bounce">🎸</div>
+                        <div class="text-xl font-bold text-white mb-2">에드 시런</div>
+                        <div class="text-white/80 text-sm">싱어송라이터의 아이콘</div>
+                    </div>
+                    <div class="group bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <div class="text-3xl mb-4 group-hover:animate-bounce">🎭</div>
+                        <div class="text-xl font-bold text-white mb-2">듀아 리파</div>
+                        <div class="text-white/80 text-sm">팝의 새로운 아이콘</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 영국 팝의 영향 -->
+        <div class="bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-12 mb-12 shadow-2xl border border-white/20 hover:shadow-kpop-500/20 transition-all duration-500 hover:-translate-y-2 animate-slide-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-8 bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent">
+                🌏 영국 팝의 세계적 영향
+            </h2>
+            <p class="text-lg md:text-xl text-gray-700 text-center leading-relaxed max-w-4xl mx-auto">
+                영국 팝은 전 세계 음악 트렌드와 패션, 사회문화에 지속적인 영향을 미치고 있습니다. 
+                브릿팝, 록 페스티벌 등 독자적인 음악 문화를 형성하며, 
+                혁신적인 음악 실험을 통해 전 세계 아티스트들에게 영감을 주고 있습니다.
+            </p>
+        </div>
+
+        <!-- 최신 영국 팝 뉴스 -->
+        <div class="bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-12 mb-12 shadow-2xl border border-white/20 hover:shadow-kpop-500/20 transition-all duration-500 hover:-translate-y-2 animate-slide-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-kpop-600 to-kpop-500 bg-clip-text text-transparent">
+                📰 최신 영국 팝 뉴스
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-kpop-50 to-kpop-100 rounded-2xl p-6 border-2 border-kpop-200 hover:border-kpop-400 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-center mb-4">
+                        <div class="text-3xl mr-3">🔥</div>
+                        <h3 class="text-xl font-bold text-kpop-800">2024년 핫 이슈</h3>
+                    </div>
+                    <ul class="space-y-3 text-kpop-700">
+                        <li class="flex items-start">
+                            <span class="text-kpop-500 mr-2">•</span>
+                            <span>아델, 새로운 앨범으로 컴백 예고</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-kpop-500 mr-2">•</span>
+                            <span>에드 시런, 월드투어 성공적 개최</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-kpop-500 mr-2">•</span>
+                            <span>콜드플레이, 새로운 실험적 음악 발표</span>
+                        </li>
             </ul>
-        </section>
-        <section>
-            <h2 class="text-3xl font-bold mb-4">대표 아티스트</h2>
-            <ul class="list-disc pl-5 space-y-2">
-                <li>비틀즈, 퀸, 아델, 콜드플레이, 에드 시런, 듀아 리파 등</li>
+                </div>
+                <div class="bg-gradient-to-br from-kpop-50 to-kpop-100 rounded-2xl p-6 border-2 border-kpop-200 hover:border-kpop-400 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-center mb-4">
+                        <div class="text-3xl mr-3">🌍</div>
+                        <h3 class="text-xl font-bold text-kpop-800">글로벌 성과</h3>
+                    </div>
+                    <ul class="space-y-3 text-kpop-700">
+                        <li class="flex items-start">
+                            <span class="text-kpop-500 mr-2">•</span>
+                            <span>영국 아티스트들의 글로벌 차트 성공</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-kpop-500 mr-2">•</span>
+                            <span>브릿팝 리바이벌 트렌드 확산</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-kpop-500 mr-2">•</span>
+                            <span>영국 음악 페스티벌의 세계적 인기</span>
+                        </li>
             </ul>
-        </section>
-        <section>
-            <h2 class="text-3xl font-bold mb-4">세계적 영향력</h2>
-            <ul class="list-disc pl-5 space-y-2">
-                <li>글로벌 음악 트렌드와 패션, 사회문화에 영향</li>
-                <li>브릿팝, 록 페스티벌 등 독자적 음악 문화 형성</li>
-            </ul>
-        </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- 푸터 -->
+        <div class="bg-gradient-to-r from-kpop-600/80 via-kpop-500/60 to-kpop-700/80 backdrop-blur-md rounded-3xl p-8 md:p-12 text-center border border-white/20 shadow-2xl">
+            <p class="text-white text-xl md:text-2xl font-semibold mb-2">🎵 영국 팝으로 하나되는 세계 🌍</p>
+            <p class="text-white/90 text-lg">영국의 대중음악이 전 세계를 감동시키고 있습니다</p>
+        </div>
     </div>
 </body>
 </html>
